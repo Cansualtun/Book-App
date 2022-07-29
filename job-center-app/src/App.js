@@ -1,18 +1,16 @@
-import Landing from "./Pages/Landing";
-import styled from "styled-components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Landing, Error, Register, Dashboard } from "./Pages";
 
-const Button = styled.button`
-  background: green;
-  color: yellow;
-  text-align: center;
-  font-size: 30px;
-`;
 function App() {
   return (
-    <div>
-      <Landing />
-      <Button>Click me!</Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
