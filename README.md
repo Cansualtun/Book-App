@@ -42,7 +42,7 @@
 - Choosed an API to work with [Root_URL](https://jobs-api-06.herokuapp.com/api-docs/)
 - Custom Axios - Setup
 - LocalStorage added for 'user'
-- Progrannatucally Navigated to Dashboard (Register.js)
+- Programmatically Navigated to Dashboard (Register.js)
 
 - Installations:
   - React-Toastify installed -[(link)](https://www.npmjs.com/package/react-toastify)
