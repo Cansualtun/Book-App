@@ -31,7 +31,7 @@
 
 ---
 
-### -b: ozan-ticket-04
+### -b: ozan-ticket-04 & cansu-ticket-05
 
 - Register Page - Setup
 - FormRow Component created
