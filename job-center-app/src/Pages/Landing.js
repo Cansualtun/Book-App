@@ -1,9 +1,9 @@
-import React from "react";
-import { Logo } from "../components";
-import main from "../assets/images/main.svg";
-import Wrapper from "../assets/wrappers/LandingPage";
+import React from 'react';
+import { Logo } from '../components';
+import main from '../assets/images/main.svg';
+import Wrapper from '../assets/wrappers/LandingPage';
 //Every time we'll set up component , import wrapper from folder.
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 const Landing = () => {
   return (
     <Wrapper>
