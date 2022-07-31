@@ -49,8 +49,8 @@
   - React-Redux-Toolkit installed [(link)](https://redux-toolkit.js.org/introduction/getting-started)
   - Axios installed [(link)](https://github.com/axios/axios)
 
-----
-  
+---
+
 ### -b: cansu-ticket-05
 
 - Dashboard Folder created
@@ -59,5 +59,11 @@
 
 - Installations:
   - React-icons installed [(link)](https://react-icons.github.io/react-icons/)
-  
-  
+
+---
+
+### -b: ozan-ticket-06
+
+- Profile Page - Setup
+- userSlice.js updated (updateUser added)
+- userSlice refactored (userThunk.js created)
