@@ -1,22 +1,23 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { toast } from 'react-toastify';
-import customFetch from '../../utils/axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
+import customFetch from "../../utils/axios";
 import {
   addUserToLocalStorage,
   getUserFromLocalStorage,
   removeUserFromLocalStorage,
-} from '../../utils/localStorage';
+} from "../../utils/localStorage";
 
 const initialState = {
   isLoading: false,
+  isSidebarOpen: false,
   user: getUserFromLocalStorage(),
 };
 
 export const registerUser = createAsyncThunk(
-  'user/registerUser',
+  "user/registerUser",
   async (user, thunkAPI) => {
     try {
-      const resp = await customFetch.post('/auth/register', user);
+      const resp = await customFetch.post("/auth/register", user);
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data.msg);
@@ -25,10 +26,10 @@ export const registerUser = createAsyncThunk(
 );
 
 export const loginUser = createAsyncThunk(
-  'user/loginUser',
+  "user/loginUser",
   async (user, thunkAPI) => {
     try {
-      const resp = await customFetch.post('/auth/login', user);
+      const resp = await customFetch.post("/auth/login", user);
       return resp.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data.msg);
@@ -37,8 +38,18 @@ export const loginUser = createAsyncThunk(
 );
 
 const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState,
+  reducers: {
+    toggleSidebar: (state) => {
+      state.isSidebarOpen = !state.isSidebarOpen;
+    },
+    logoutUser: (state) => {
+      state.user = null;
+      state.isSidebarOpen = false;
+      removeUserFromLocalStorage();
+    },
+  },
   extraReducers: {
     [registerUser.pending]: (state) => {
       state.isLoading = true;
@@ -71,4 +82,5 @@ const userSlice = createSlice({
   },
 });
 
+export const { toggleSidebar, logoutUser } = userSlice.actions;
 export default userSlice.reducer;
