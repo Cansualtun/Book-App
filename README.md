@@ -31,7 +31,7 @@
 
 ---
 
-### -b: ozan-ticket-04 & cansu-ticket-05
+### -b: ozan-ticket-04 & cansu-ticket-04
 
 - Register Page - Setup
 - FormRow Component created
@@ -48,3 +48,15 @@
   - React-Toastify installed -[(link)](https://www.npmjs.com/package/react-toastify)
   - React-Redux-Toolkit installed [(link)](https://redux-toolkit.js.org/introduction/getting-started)
   - Axios installed [(link)](https://github.com/axios/axios)
+  
+  ### -b : cansu-ticket-05
+  
+  - remove Dashboard.js , create Dashboard Folder
+  - create Stats, Profile, AddJob, AllJobs, SharedLayout in components/Dashboard,
+  - create index.js and setup import/export
+  - create Navbar, SmallSidebar, BigSidebar in components import Wrappers from assets/wrappers
+  - import Wrappers (styledComponents)  in BigSidebar,SmallSidebar and Navbar 
+  - Added icons from React icons - [(link)](https://react-icons.github.io/react-icons/)
+  - create components/NavLinks.js , styles still set from Wrapper also can setup in links.js, preference.
+  
+  
