@@ -45,22 +45,19 @@
 - Programmatically Navigated to Dashboard (Register.js)
 
 - Installations:
-  - React-Toastify installed -[(link)](https://www.npmjs.com/package/react-toastify)
+  - React-Toastify installed [(link)](https://www.npmjs.com/package/react-toastify)
   - React-Redux-Toolkit installed [(link)](https://redux-toolkit.js.org/introduction/getting-started)
   - Axios installed [(link)](https://github.com/axios/axios)
 
 ----
   
-### -b : cansu-ticket-05
-  
-- remove Dashboard.js , create Dashboard Folder
-- create Stats, Profile, AddJob, AllJobs, SharedLayout in components/Dashboard,
-- create index.js and setup import/export
-- create Navbar, SmallSidebar, BigSidebar in components import Wrappers from assets/wrappers
-- import Wrappers (styledComponents)  in BigSidebar,SmallSidebar and Navbar
-- create components/NavLinks.js , styles still set from Wrapper also can setup in links.js, preference.
+### -b: cansu-ticket-05
+
+- Dashboard Folder created
+- Stats.js, Profile.js, AddJob.js, AllJobs.js, SharedLayout.js created in Pages/Dashboard,
+- Navbar, SmallSidebar, BigSidebar created in components
 
 - Installations:
-  - React-icons installed - [(link)](https://react-icons.github.io/react-icons/)
+  - React-icons installed [(link)](https://react-icons.github.io/react-icons/)
   
   
