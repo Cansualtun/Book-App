@@ -61,6 +61,6 @@
 - create components/NavLinks.js , styles still set from Wrapper also can setup in links.js, preference.
 
 - Installations:
-  - Added icons from React icons - [(link)](https://react-icons.github.io/react-icons/)
+  - React-icons installed - [(link)](https://react-icons.github.io/react-icons/)
   
   
