@@ -57,8 +57,10 @@
 - create Stats, Profile, AddJob, AllJobs, SharedLayout in components/Dashboard,
 - create index.js and setup import/export
 - create Navbar, SmallSidebar, BigSidebar in components import Wrappers from assets/wrappers
-- import Wrappers (styledComponents)  in BigSidebar,SmallSidebar and Navbar 
-- Added icons from React icons - [(link)](https://react-icons.github.io/react-icons/)
+- import Wrappers (styledComponents)  in BigSidebar,SmallSidebar and Navbar
 - create components/NavLinks.js , styles still set from Wrapper also can setup in links.js, preference.
+
+- Installations:
+  - Added icons from React icons - [(link)](https://react-icons.github.io/react-icons/)
   
   
