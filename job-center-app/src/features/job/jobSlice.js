@@ -1,27 +1,27 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { toast } from "react-toastify";
-import customFetch from "../../utils/axios";
-import { getUserFromLocalStorage } from "../../utils/localStorage";
-import { logoutUser } from "../user/userSlice";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
+import customFetch from '../../utils/axios';
+import { getUserFromLocalStorage } from '../../utils/localStorage';
+import { logoutUser } from '../user/userSlice';
 
 const initialState = {
   isLoading: false,
-  position: "",
-  company: "",
-  jobLocation: "",
-  jobTypeOptions: ["full-time", "part-time", "remote", "internship"],
-  jobType: "full-time",
-  statusOptions: ["interview", "declined", "pending"],
-  status: "pending",
+  position: '',
+  company: '',
+  jobLocation: '',
+  jobTypeOptions: ['full-time', 'part-time', 'remote', 'internship'],
+  jobType: 'full-time',
+  statusOptions: ['interview', 'declined', 'pending'],
+  status: 'pending',
   isEditing: false,
-  editJobId: "",
+  editJobId: '',
 };
 
 export const createJob = createAsyncThunk(
-  "job/createJob",
+  'job/createJob',
   async (job, thunkAPI) => {
     try {
-      const resp = await customFetch.post("/jobs", job, {
+      const resp = await customFetch.post('/jobs', job, {
         headers: {
           authorization: `Bearer ${thunkAPI.getState().user.user.token}`,
         },
@@ -29,12 +29,9 @@ export const createJob = createAsyncThunk(
       thunkAPI.dispatch(clearValues());
       return resp.data;
     } catch (error) {
-      // basic setup
-      return thunkAPI.rejectWithValue(error.response.data.msg);
-      // logout user
       if (error.response.status === 401) {
         thunkAPI.dispatch(logoutUser());
-        return thunkAPI.rejectWithValue("Unauthorized! Logging Out...");
+        return thunkAPI.rejectWithValue('Unauthorized! Logging Out...');
       }
       return thunkAPI.rejectWithValue(error.response.data.msg);
     }
@@ -42,7 +39,7 @@ export const createJob = createAsyncThunk(
 );
 
 const jobSlice = createSlice({
-  name: "job",
+  name: 'job',
   initialState,
   reducers: {
     handleChange: (state, { payload: { name, value } }) => {
@@ -51,7 +48,7 @@ const jobSlice = createSlice({
     clearValues: () => {
       return {
         ...initialState,
-        jobLocation: getUserFromLocalStorage()?.location || "",
+        jobLocation: getUserFromLocalStorage()?.location || '',
       };
     },
   },
@@ -61,7 +58,7 @@ const jobSlice = createSlice({
     },
     [createJob.fulfilled]: (state, action) => {
       state.isLoading = false;
-      toast.success("Job Created");
+      toast.success('Job Created');
     },
     [createJob.rejected]: (state, { payload }) => {
       state.isLoading = false;
