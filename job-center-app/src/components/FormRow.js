@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const FormRow = ({ type, name, value, handleChange, labelText }) => {
   return (
@@ -7,6 +7,7 @@ const FormRow = ({ type, name, value, handleChange, labelText }) => {
         {labelText || name}
       </label>
       <input
+        id={name}
         type={type}
         name={name}
         value={value}
