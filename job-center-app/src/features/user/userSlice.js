@@ -1,16 +1,16 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { toast } from 'react-toastify';
-import customFetch from '../../utils/axios';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
+import customfetch from "../../utils/axios";
 import {
   addUserToLocalStorage,
   getUserFromLocalStorage,
   removeUserFromLocalStorage,
-} from '../../utils/localStorage';
+} from "../../utils/localStorage";
 import {
   loginUserThunk,
   registerUserThunk,
   updateUserThunk,
-} from './userThunk';
+} from "./userThunk";
 
 const initialState = {
   isLoading: false,
@@ -19,37 +19,40 @@ const initialState = {
 };
 
 export const registerUser = createAsyncThunk(
-  'user/registerUser',
+  "user/registerUser",
   async (user, thunkAPI) => {
-    return registerUserThunk('/auth/register', user, thunkAPI);
+    return registerUserThunk("/auth/register", user, thunkAPI);
   }
 );
 
 export const loginUser = createAsyncThunk(
-  'user/loginUser',
+  "user/loginUser",
   async (user, thunkAPI) => {
-    return loginUserThunk('/auth/login', user, thunkAPI);
+    return loginUserThunk("/auth/login", user, thunkAPI);
   }
 );
 
 export const updateUser = createAsyncThunk(
-  'user/updateUser',
+  "user/updateUser",
   async (user, thunkAPI) => {
-    return updateUserThunk('/auth/updateUser', user, thunkAPI);
+    return updateUserThunk("/auth/updateUser", user, thunkAPI);
   }
 );
 
 const userSlice = createSlice({
-  name: 'user',
+  name: "user",
   initialState,
   reducers: {
     toggleSidebar: (state) => {
       state.isSidebarOpen = !state.isSidebarOpen;
     },
-    logoutUser: (state) => {
+    logoutUser: (state, { payload }) => {
       state.user = null;
       state.isSidebarOpen = false;
       removeUserFromLocalStorage();
+      if (payload) {
+        toast.success(payload);
+      }
     },
   },
   extraReducers: {
