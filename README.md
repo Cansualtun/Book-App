@@ -67,3 +67,11 @@
 - Profile Page - Setup
 - userSlice.js updated (updateUser added)
 - userSlice refactored (userThunk.js created)
+
+---
+
+### -b : cansu-ticket-07
+
+- Job folder (jobSlice added) and FormRowSelect created 
+- AddJob.js and Navbar.js uptaded
+- Logout messaged created
