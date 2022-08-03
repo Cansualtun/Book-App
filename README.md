@@ -70,8 +70,15 @@
 
 ---
 
-### -b : cansu-ticket-07
+### -b: cansu-ticket-07
 
-- Job folder (jobSlice added) and FormRowSelect created 
+- Job folder (jobSlice added) and FormRowSelect created
 - AddJob.js and Navbar.js uptaded
 - Logout messaged created
+
+---
+
+### -b: ozan-ticket-08
+
+- Installations:
+  - Moment installed [(link)](https://momentjs.com/)
