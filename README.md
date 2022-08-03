@@ -82,3 +82,21 @@
 
 - Installations:
   - Moment installed [(link)](https://momentjs.com/)
+  
+  
+---
+  
+### -b: ozan-ticket-09 
+
+
+
+---
+### -b: cansu-ticket-10
+
+-JobThunk.js created
+-Refactoring JobSlice.js to JobThunk
+-AuthHeader.js created
+-Test user added for demo.
+
+
+
