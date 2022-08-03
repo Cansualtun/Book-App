@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Logo, FormRow } from '../components';
-import { useNavigate } from 'react-router-dom';
-import Wrapper from '../assets/wrappers/RegisterPage';
-import { toast } from 'react-toastify';
-import { registerUser, loginUser } from '../features/user/userSlice';
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Logo, FormRow } from "../components";
+import { useNavigate } from "react-router-dom";
+import Wrapper from "../assets/wrappers/RegisterPage";
+import { toast } from "react-toastify";
+import { registerUser, loginUser } from "../features/user/userSlice";
 
 const initialState = {
-  name: '',
-  email: '',
-  password: '',
+  name: "",
+  email: "",
+  password: "",
   isMember: true,
 };
 
@@ -30,7 +30,7 @@ function Register() {
     e.preventDefault();
     const { name, email, password, isMember } = values;
     if (!email || !password || (!isMember && !name)) {
-      toast.error('Please Fill Out All Fields');
+      toast.error("Please Fill Out All Fields");
       return;
     }
     if (isMember) {
@@ -47,7 +47,7 @@ function Register() {
   useEffect(() => {
     if (user) {
       setTimeout(() => {
-        navigate('/');
+        navigate("/");
       }, 2000);
     }
   }, [user]);
@@ -56,7 +56,7 @@ function Register() {
     <Wrapper className="full-page">
       <form className="form" onSubmit={onSubmit}>
         <Logo />
-        <h3>{values.isMember ? 'Login' : 'Register'}</h3>
+        <h3>{values.isMember ? "Login" : "Register"}</h3>
         {/* name */}
         {!values.isMember && (
           <FormRow
@@ -81,12 +81,24 @@ function Register() {
           handleChange={handleChange}
         />
         <button type="submit" className="btn btn-block" disabled={isLoading}>
-          {isLoading ? 'Loading...' : 'submit'}
+          {isLoading ? "Loading..." : "submit"}
+        </button>
+        <button
+          type="button"
+          className="btn btn-block btn-hipster"
+          disabled={isLoading}
+          onClick={() =>
+            dispatch(
+              loginUser({ email: "testUser@test.com", password: "secret" })
+            )
+          }
+        >
+          {isLoading ? "Loading..." : "demo app"}
         </button>
         <p>
-          {values.isMember ? 'Not a member yet?' : 'Already a member?'}
+          {values.isMember ? "Not a member yet?" : "Already a member?"}
           <button type="button" onClick={toggleMember} className="member-btn">
-            {values.isMember ? 'Register' : 'Login'}
+            {values.isMember ? "Register" : "Login"}
           </button>
         </p>
       </form>
