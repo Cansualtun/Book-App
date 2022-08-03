@@ -93,10 +93,10 @@
 ---
 ### -b: cansu-ticket-10
 
--JobThunk.js created
--Refactoring JobSlice.js to JobThunk
--AuthHeader.js created
--Test user added for demo.
+- JobThunk.js created
+- Refactoring JobSlice.js to JobThunk
+- AuthHeader.js created
+- Test user added for demo.
 
 
 
