@@ -31,13 +31,13 @@ export const deleteJobThunk = async (jobId, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.response.data.msg);
   }
 };
-export const editJobThunk = async (jobId, job, thunkAPI) => {
+export const editJobThunk = async ({ jobId, job }, thunkAPI) => {
   try {
-    const resp = await customFetch.patch(
-      `/jobs/${jobId}`,
-      job,
-      authHeader(thunkAPI)
-    );
+    const resp = await customFetch.patch(`/jobs/${jobId}`, job, {
+      headers: {
+        authorization: `Bearer ${thunkAPI.getState().user.user.token}`,
+      },
+    });
     thunkAPI.dispatch(clearValues());
     return resp.data;
   } catch (error) {
