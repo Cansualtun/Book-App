@@ -16,7 +16,7 @@ export const createJobThunk = async (job, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.response.data.msg);
   }
 };
-export const deleteJobThunk = async (jobId, thunkAPI) => {
+export const editJobThunk = async ({ jobId, job }, thunkAPI) => {
   thunkAPI.dispatch(showLoading());
   try {
     const resp = await customFetch.delete(`/jobs/${jobId}`);
@@ -27,7 +27,7 @@ export const deleteJobThunk = async (jobId, thunkAPI) => {
     return thunkAPI.rejectWithValue(error.response.data.msg);
   }
 };
-export const editJobThunk = async (jobId, job, thunkAPI) => {
+export const deleteJobThunk = async (jobId, job, thunkAPI) => {
   try {
     const resp = await customFetch.patch(`/jobs/${jobId}`, job);
     thunkAPI.dispatch(clearValues());
