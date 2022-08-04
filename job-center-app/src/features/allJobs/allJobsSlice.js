@@ -34,11 +34,12 @@ export const getAllJobs = createAsyncThunk(
     }
   }
 );
+
 export const showStats = createAsyncThunk(
-  "allJobs/showStats",
+  'allJobs/showStats',
   async (_, thunkAPI) => {
     try {
-      const resp = await customFetch.get("/jobs/stats");
+      const resp = await customFetch.get('/jobs/stats', authHeader(thunkAPI));
       console.log(resp.data);
       return resp.data;
     } catch (error) {
