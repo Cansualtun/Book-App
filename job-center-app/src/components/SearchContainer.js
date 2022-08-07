@@ -10,7 +10,7 @@ const SearchContainer = () => {
   const dispatch = useDispatch();
 
   const handleSearch = (e) => {
-    // isLoading
+    if (isLoading) return; // it will return only request is done
     dispatch(handleChange({ name: e.target.name, value: e.target.value }));
   };
 
