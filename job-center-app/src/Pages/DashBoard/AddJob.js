@@ -16,10 +16,10 @@ const AddJob = () => {
     position,
     company,
     jobLocation,
-    jobType,
     status,
-    jobTypeOptions,
+    jobType,
     statusOptions,
+    jobTypeOptions,
     isEditing,
     editJobId,
   } = useSelector((store) => store.job);
