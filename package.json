@@ -1,1 +1,37 @@
-{}
+{
+  "name": "job-center",
+  "description": "-",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server --ignore job-center-app",
+    "job-center-app": "npm start --prefix job-center-app",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run job-center-app\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OzanYasin/Job-Center.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OzanYasin/Job-Center/issues"
+  },
+  "homepage": "https://github.com/OzanYasin/Job-Center#readme",
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.1",
+    "validator": "^13.7.0"
+  }
+}

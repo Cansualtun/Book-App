@@ -82,15 +82,13 @@
 
 - Installations:
   - Moment installed [(link)](https://momentjs.com/)
-  
-  
----
-  
-### -b: ozan-ticket-09 
-
-
 
 ---
+
+### -b: ozan-ticket-09
+
+---
+
 ### -b: cansu-ticket-10
 
 - JobThunk.js created
@@ -98,5 +96,21 @@
 - AuthHeader.js created
 - Test user added for demo.
 
+---
 
+### -b: server-01
 
+- Installations:
+  - nodemon
+  - express
+  - dotenv
+  - mongoose
+  - validator
+  - express-async-errors
+  - http-status-codes
+  - bcryptjs
+  - jsonwebtoken
+  - concurrently
+  -
+
+Git Test
