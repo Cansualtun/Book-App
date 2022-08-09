@@ -111,6 +111,4 @@
   - bcryptjs
   - jsonwebtoken
   - concurrently
-  -
-
-Git Test
+  - morgan
