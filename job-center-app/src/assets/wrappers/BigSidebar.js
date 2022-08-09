@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.aside`
   display: none;
@@ -34,7 +34,7 @@ const Wrapper = styled.aside`
     .nav-link {
       display: flex;
       align-items: center;
-      color: var(--grey-500);
+      color: var(--card);
       padding: 1rem 0;
       padding-left: 2.5rem;
       text-transform: capitalize;
@@ -46,7 +46,7 @@ const Wrapper = styled.aside`
       color: var(--grey-900);
     }
     .nav-link:hover .icon {
-      color: var(--primary-500);
+      color: var(--button);
     }
     .icon {
       font-size: 1.5rem;
@@ -59,8 +59,8 @@ const Wrapper = styled.aside`
       color: var(--grey-900);
     }
     .active .icon {
-      color: var(--primary-500);
+      color: var(--search);
     }
   }
-`
-export default Wrapper
+`;
+export default Wrapper;

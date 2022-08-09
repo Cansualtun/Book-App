@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.aside`
   @media (min-width: 992px) {
@@ -37,7 +37,7 @@ const Wrapper = styled.aside`
     background: transparent;
     border-color: transparent;
     font-size: 2rem;
-    color: var(--red-dark);
+    color: var(--card);
     cursor: pointer;
   }
   .nav-links {
@@ -54,10 +54,10 @@ const Wrapper = styled.aside`
     transition: var(--transition);
   }
   .nav-link:hover {
-    color: var(--grey-900);
+    color: var(--card);
   }
   .nav-link:hover .icon {
-    color: var(--primary-500);
+    color: var(--grey-900);
   }
   .icon {
     font-size: 1.5rem;
@@ -70,7 +70,7 @@ const Wrapper = styled.aside`
     color: var(--grey-900);
   }
   .active .icon {
-    color: var(--primary-500);
+    color: var(--search);
   }
 `;
 export default Wrapper;

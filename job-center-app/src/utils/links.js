@@ -12,13 +12,13 @@ const links = [
   },
   {
     id: 2,
-    text: "all jobs",
+    text: "all-book",
     path: "all-jobs",
     icon: <MdQueryStats />,
   },
   {
     id: 3,
-    text: "add job",
+    text: "add book",
     path: "add-job",
     icon: <FaWpforms />,
   },
