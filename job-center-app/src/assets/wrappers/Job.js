@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.article`
-  background: var(--white);
+  background: var(--card);
   border-radius: var(--borderRadius);
   display: grid;
   grid-template-rows: 1fr auto;

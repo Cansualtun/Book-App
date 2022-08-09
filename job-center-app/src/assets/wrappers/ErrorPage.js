@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.main`
   text-align: center;
+  background-color: var(--green);
   img {
     width: 90vw;
     max-width: 600px;
