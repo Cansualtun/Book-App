@@ -112,3 +112,4 @@
   - jsonwebtoken
   - concurrently
   - morgan
+  - mockaroo
