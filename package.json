@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server --ignore job-center-app",
-    "job-center-app": "npm start --prefix job-center-app",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run job-center-app\""
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client\""
   },
   "repository": {
     "type": "git",
