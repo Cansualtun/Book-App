@@ -43,10 +43,10 @@ html {
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
   --purple: #7d1e6a;
-  --bg: #e5efc1;
-  --card: #a2d5ab;
-  --search: #39aea9;
-  --button: #557b83;
+  /* My Palette */
+  --bg: #f0f4f8;
+  --button: #ea5c2b;
+  --buttonhover: #ff7f3f;
 
   /* fonts  */
   --headingFont: "Roboto Mono", monospace;
@@ -54,7 +54,7 @@ html {
   --small-text: 0.875rem;
   --extra-small-text: 0.7em;
   /* rest of the vars */
-  --backgroundColor: var(--grey-50);
+  --backgroundColor: var(--white);
   --textColor: var(--grey-900);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;

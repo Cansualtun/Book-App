@@ -1,10 +1,10 @@
-import JobInfo from './JobInfo';
-import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import Wrapper from '../assets/wrappers/Job';
-import { useDispatch } from 'react-redux';
-import moment from 'moment';
-import { deleteJob, setEditJob } from '../features/job/jobSlice';
+import JobInfo from "./JobInfo";
+import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Wrapper from "../assets/wrappers/Job";
+import { useDispatch } from "react-redux";
+import moment from "moment";
+import { deleteJob, setEditJob } from "../features/job/jobSlice";
 
 const Job = ({
   _id,
@@ -17,7 +17,7 @@ const Job = ({
 }) => {
   const dispatch = useDispatch();
 
-  const date = moment(createdAt).format('MMM Do YYYY'); // createdAt is coming from the server
+  const date = moment(createdAt).format("MMM Do YYYY"); // createdAt is coming from the server
 
   return (
     <Wrapper>

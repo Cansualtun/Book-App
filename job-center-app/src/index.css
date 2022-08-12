@@ -43,10 +43,11 @@ html {
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
   --purple: #7d1e6a;
-  --bg: #e5efc1;
-  --card: #a2d5ab;
-  --search: #39aea9;
-  --button: #557b83;
+  --bg: #fcf8e8;
+  /* My Palette */
+  --bg: #f0f4f8;
+  --button: #ea5c2b;
+  --buttonhover: #ff7f3f;
 
   /* fonts  */
   --headingFont: "Roboto Mono", monospace;
@@ -153,7 +154,7 @@ ul {
 .btn {
   cursor: pointer;
   color: var(--white);
-  background: var(--search);
+  background: var(--buttonhover);
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
