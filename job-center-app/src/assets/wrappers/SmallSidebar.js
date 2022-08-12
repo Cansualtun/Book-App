@@ -57,7 +57,7 @@ const Wrapper = styled.aside`
     color: var(--card);
   }
   .nav-link:hover .icon {
-    color: var(--grey-900);
+    color: var(--buttonhover);
   }
   .icon {
     font-size: 1.5rem;
@@ -67,7 +67,7 @@ const Wrapper = styled.aside`
     transition: var(--transition);
   }
   .active {
-    color: var(--grey-900);
+    color: var(--button);
   }
   .active .icon {
     color: var(--search);

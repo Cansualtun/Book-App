@@ -4,7 +4,7 @@ const Wrapper = styled.section`
   .form {
     width: 100%;
     max-width: 100%;
-    background-color: var(--card);
+    background-color: var(--white);
   }
   .form-input,
   .form-select,
@@ -26,6 +26,8 @@ const Wrapper = styled.section`
   .btn-block {
     align-self: end;
     margin-top: 1rem;
+    background-color: var(--buttonhover);
+    color: white;
   }
   @media (min-width: 768px) {
     .form-center {

@@ -1,7 +1,7 @@
-import { FormRow, FormRowSelect } from '.';
-import Wrapper from '../assets/wrappers/SearchContainer';
-import { useSelector, useDispatch } from 'react-redux';
-import { handleChange, clearFilters } from '../features/allJobs/allJobsSlice';
+import { FormRow, FormRowSelect } from ".";
+import Wrapper from "../assets/wrappers/SearchContainer";
+import { useSelector, useDispatch } from "react-redux";
+import { handleChange, clearFilters } from "../features/allJobs/allJobsSlice";
 
 const SearchContainer = () => {
   const { search, searchStatus, searchType, sort, sortOptions, isLoading } =
@@ -37,7 +37,7 @@ const SearchContainer = () => {
             name="searchStatus"
             value={searchStatus}
             handleChange={handleSearch}
-            list={['all', ...statusOptions]}
+            list={["all", ...statusOptions]}
           />
           {/* type search */}
           <FormRowSelect
@@ -45,7 +45,7 @@ const SearchContainer = () => {
             name="searchType"
             value={searchType}
             handleChange={handleSearch}
-            list={['all', ...jobTypeOptions]}
+            list={["all", ...jobTypeOptions]}
           />
           <FormRowSelect
             name="sort"

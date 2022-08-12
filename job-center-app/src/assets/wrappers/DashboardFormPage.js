@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-  background-color: var(--card);
+  background-color: var(--white);
   border-radius: var(--borderRadius);
   width: 100%;
   padding: 3rem 2rem 4rem;

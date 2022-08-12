@@ -22,7 +22,7 @@ const Wrapper = styled.main`
   h1 {
     font-weight: 700;
     span {
-      color: var(--card);
+      color: var(--button);
     }
   }
   p {

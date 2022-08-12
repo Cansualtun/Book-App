@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Wrapper = styled.section`
   display: grid;
   align-items: center;
-  background-color: var(--bg);
   .logo {
     display: block;
     margin: 0 auto;
@@ -12,6 +11,7 @@ const Wrapper = styled.section`
   .form {
     max-width: 400px;
     border-top: 5px solid var(--yellow);
+    border-radius: 10;
   }
 
   h3 {
@@ -24,11 +24,13 @@ const Wrapper = styled.section`
   }
   .btn {
     margin-top: 1rem;
+    color: white;
+    background-color: var(--button);
   }
   .member-btn {
     background: transparent;
     border: transparent;
-    color: var(--search);
+    color: var(--button);
     cursor: pointer;
     letter-spacing: var(--letterSpacing);
   }

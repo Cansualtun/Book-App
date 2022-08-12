@@ -70,21 +70,21 @@ const AddJob = () => {
           {/*Position*/}
           <FormRow
             type="text"
-            name="Book Name"
+            name="Position"
             value={position}
             handleChange={handleJobInput}
           />
           {/*Company*/}
           <FormRow
             type="text"
-            name="type"
+            name="Company"
             value={company}
             handleChange={handleJobInput}
           />
           {/* joblocation */}
           <FormRow
             type="text"
-            labelText="Page Number"
+            labelText="Job Location"
             name="jobLocation"
             value={jobLocation}
             handleChange={handleJobInput}
@@ -96,7 +96,7 @@ const AddJob = () => {
             handleChange={handleJobInput}
             list={statusOptions}
           />
-          {/* job type 
+          {/*job type */}
           <FormRowSelect
             name="jobType"
             labelText="job type"
@@ -104,7 +104,6 @@ const AddJob = () => {
             handleChange={handleJobInput}
             list={jobTypeOptions}
           />
-          */}
           {/* btn container */}
           <div className="btn-container">
             <button

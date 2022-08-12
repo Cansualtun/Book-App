@@ -19,14 +19,14 @@ const Wrapper = styled.section`
     height: 40px;
     font-weight: 700;
     font-size: 1.25rem;
-    color: var(--button);
+    color: var(--buttonhover);
     transition: var(--transition);
     border-radius: var(--borderRadius);
     cursor: pointer;
   }
   .active {
     background: var(--search);
-    color: var(--white);
+    color: var(--greendark);
   }
   .prev-btn,
   .next-btn {
@@ -48,7 +48,7 @@ const Wrapper = styled.section`
   .prev-btn:hover,
   .next-btn:hover {
     background: var(--search);
-    color: var(--white);
+    color: var(--button);
   }
 `;
 export default Wrapper;

@@ -21,7 +21,7 @@ const Wrapper = styled.nav`
     background: transparent;
     border-color: transparent;
     font-size: 1.75rem;
-    color: var(--card);
+    color: var(--button);
     cursor: pointer;
     display: flex;
     align-items: center;

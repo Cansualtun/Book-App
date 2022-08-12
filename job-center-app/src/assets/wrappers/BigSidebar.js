@@ -43,7 +43,7 @@ const Wrapper = styled.aside`
     .nav-link:hover {
       background: var(--grey-50);
       padding-left: 3rem;
-      color: var(--grey-900);
+      color: var(--button);
     }
     .nav-link:hover .icon {
       color: var(--button);
@@ -56,7 +56,7 @@ const Wrapper = styled.aside`
       transition: var(--transition);
     }
     .active {
-      color: var(--grey-900);
+      color: var(--button);
     }
     .active .icon {
       color: var(--search);

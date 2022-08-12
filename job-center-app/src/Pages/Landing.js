@@ -10,7 +10,7 @@ const Landing = () => {
         {/*info */}
         <div className="info">
           <h1>
-            Book<span> Tracking </span>App
+            <span> Book Library </span>App
           </h1>
           <p>
             Book app is an application where people save the books they read.
