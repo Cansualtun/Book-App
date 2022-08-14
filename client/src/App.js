@@ -1,15 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Landing, Error, Register } from "./Pages";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import {
-  Profile,
-  AddJob,
-  AllJobs,
-  Stats,
-  SharedLayout,
-} from "./Pages/DashBoard";
-import ProtectedRoute from "./Pages/ProtectedRoute";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Landing, Error, Register } from './Pages';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Profile, AddJob, AllJobs, SharedLayout } from './Pages/DashBoard';
+import ProtectedRoute from './Pages/ProtectedRoute';
 
 function App() {
   return (
@@ -23,8 +17,7 @@ function App() {
             </ProtectedRoute>
           }
         >
-          <Route index element={<Stats />} />
-          <Route path="all-jobs" element={<AllJobs />} />
+          <Route index element={<AllJobs />} />
           <Route path="add-job" element={<AddJob />} />
           <Route path="profile" element={<Profile />} />
         </Route>
