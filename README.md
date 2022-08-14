@@ -6,7 +6,7 @@ Book app is an archive application where users can save the books they read and 
 
 ---
 
-- Installations:
+## Installations:
   - normalize.css installed [(link)](https://necolas.github.io/normalize.css/)
   - Styled Components installed [(link)](https://styled-components.com/docs)
   - React Router installed [(link)](https://reactrouter.com/docs/en/v6)
