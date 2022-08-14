@@ -1,17 +1,19 @@
-import JobInfo from './JobInfo';
-import { FaLocationArrow, FaBriefcase, FaCalendarAlt } from 'react-icons/fa';
+import BookInfo from './BookInfo';
+import { FaCalendarAlt } from 'react-icons/fa';
+import { BsBook } from 'react-icons/bs';
+import { GiWhiteBook } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/Job';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
-import { deleteJob, setEditJob } from '../features/job/jobSlice';
+import { deleteBook, setEditBook } from '../features/book/bookSlice';
 
-const Job = ({
+const Book = ({
   _id,
-  company,
-  jobLocation,
-  jobType,
-  position,
+  bookName,
+  pageNumber,
+  bookType,
+  bookAuthor,
   status,
   createdAt,
 }) => {
@@ -22,32 +24,32 @@ const Job = ({
   return (
     <Wrapper>
       <header>
-        <div className="main-icon">{company.charAt(0)}</div>
+        <div className="main-icon">{bookName.charAt(0)}</div>
         <div className="info">
-          <h5>{position}</h5>
-          <p>{company}</p>
+          <h5>{bookName}</h5>
+          <p>{bookAuthor}</p>
         </div>
       </header>
       <div className="content">
         <div className="content-center">
-          <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
-          <JobInfo icon={<FaCalendarAlt />} text={date} />
-          <JobInfo icon={<FaBriefcase />} text={jobType} />
+          <BookInfo icon={<BsBook />} text={pageNumber} />
+          <BookInfo icon={<FaCalendarAlt />} text={date} />
+          <BookInfo icon={<GiWhiteBook />} text={bookType} />
           <div className={`status ${status}`}>{status}</div>
         </div>
         <footer>
           <div className="actions">
             <Link
-              to="/add-job"
+              to="/add-book"
               className="btn edit-btn"
               onClick={() =>
                 dispatch(
-                  setEditJob({
-                    editJobId: _id,
-                    company,
-                    jobLocation,
-                    jobType,
-                    position,
+                  setEditBook({
+                    editBookId: _id,
+                    bookName,
+                    pageNumber,
+                    bookType,
+                    bookAuthor,
                     status,
                   })
                 )
@@ -58,7 +60,7 @@ const Job = ({
             <button
               type="button"
               className="btn delete-btn"
-              onClick={() => dispatch(deleteJob(_id))}
+              onClick={() => dispatch(deleteBook(_id))}
             >
               delete
             </button>
@@ -69,4 +71,4 @@ const Job = ({
   );
 };
 
-export default Job;
+export default Book;

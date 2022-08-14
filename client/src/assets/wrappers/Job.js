@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.article`
   background: var(--white);
@@ -41,17 +41,17 @@ const Wrapper = styled.article`
       letter-spacing: var(--letterSpacing);
     }
   }
-  .pending {
+  .reading {
     background: #fcefc7;
     color: #e9b949;
   }
-  .interview {
+  .read {
     background: #e0e8f9;
     color: #647acb;
   }
-  .declined {
-    color: #d66a6a;
-    background: #ffeeee;
+  .finished {
+    color: #008317;
+    background: #97fabce6;
   }
   .content {
     padding: 1rem 1.5rem;

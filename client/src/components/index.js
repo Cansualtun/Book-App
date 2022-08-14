@@ -4,8 +4,8 @@ import Navbar from './Navbar';
 import SmallSidebar from './SmallSidebar';
 import BigSidebar from './BigSidebar';
 import FormRowSelect from './FormRowSelect';
-import Job from './Job';
-import JobsContainer from './JobsContainer';
+import Book from './Book';
+import BooksContainer from './BooksContainer';
 import SearchContainer from './SearchContainer';
 import ChartsContainer from './ChartsContainer';
 import Loading from './Loading';
@@ -17,8 +17,8 @@ export {
   SmallSidebar,
   BigSidebar,
   FormRowSelect,
-  Job,
-  JobsContainer,
+  Book,
+  BooksContainer,
   SearchContainer,
   ChartsContainer,
   Loading,

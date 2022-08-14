@@ -1,39 +1,43 @@
-import { showLoading, hideLoading, getAllJobs } from "../allJobs/allJobsSlice";
-import customFetch from "../../utils/axios";
-import { clearValues } from "./jobSlice";
-import { logoutUser } from "../user/userSlice";
-import authHeader from "../../utils/authHeader";
+import {
+  showLoading,
+  hideLoading,
+  getAllBooks,
+} from '../allBooks/allBooksSlice';
+import customFetch from '../../utils/axios';
+import { clearValues } from './bookSlice';
+import { logoutUser } from '../user/userSlice';
+import authHeader from '../../utils/authHeader';
 
-export const createJobThunk = async (job, thunkAPI) => {
+export const createBookThunk = async (book, thunkAPI) => {
   try {
-    const resp = await customFetch.post("/jobs", job, authHeader(thunkAPI));
+    const resp = await customFetch.post('/books', book, authHeader(thunkAPI));
     thunkAPI.dispatch(clearValues());
     return resp.data;
   } catch (error) {
     if (error.response.status === 401) {
       thunkAPI.dispatch(logoutUser());
-      return thunkAPI.rejectWithValue("Unauthorized! Logging Out...");
+      return thunkAPI.rejectWithValue('Unauthorized! Logging Out...');
     }
     return thunkAPI.rejectWithValue(error.response.data.msg);
   }
 };
-export const deleteJobThunk = async (jobId, thunkAPI) => {
+export const deleteBookThunk = async (bookId, thunkAPI) => {
   thunkAPI.dispatch(showLoading());
   try {
     const resp = await customFetch.delete(
-      `/jobs/${jobId}`,
+      `/books/${bookId}`,
       authHeader(thunkAPI)
     );
-    thunkAPI.dispatch(getAllJobs());
+    thunkAPI.dispatch(getAllBooks());
     return resp.data.msg;
   } catch (error) {
     thunkAPI.dispatch(hideLoading());
     return thunkAPI.rejectWithValue(error.response.data.msg);
   }
 };
-export const editJobThunk = async ({ jobId, job }, thunkAPI) => {
+export const editBookThunk = async ({ bookId, book }, thunkAPI) => {
   try {
-    const resp = await customFetch.patch(`/jobs/${jobId}`, job, {
+    const resp = await customFetch.patch(`/books/${bookId}`, book, {
       headers: {
         authorization: `Bearer ${thunkAPI.getState().user.user.token}`,
       },

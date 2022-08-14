@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
-import { getAllJobsThunk } from './allJobsThunk';
+import { getAllBooksThunk } from './allBooksThunk';
 
 const initialFiltersState = {
   search: '',
@@ -12,17 +12,20 @@ const initialFiltersState = {
 
 const initialState = {
   isLoading: true,
-  jobs: [],
-  totalJobs: 0,
+  books: [],
+  totalBooks: 0,
   numOfPages: 1,
   page: 1,
   ...initialFiltersState,
 };
 
-export const getAllJobs = createAsyncThunk('allJobs/getJobs', getAllJobsThunk);
+export const getAllBooks = createAsyncThunk(
+  'allBooks/getBooks',
+  getAllBooksThunk
+);
 
-const allJobsSlice = createSlice({
-  name: 'allJobs',
+const allBooksSlice = createSlice({
+  name: 'allBooks',
   initialState,
   reducers: {
     showLoading: (state) => {
@@ -43,16 +46,16 @@ const allJobsSlice = createSlice({
     },
   },
   extraReducers: {
-    [getAllJobs.pending]: (state) => {
+    [getAllBooks.pending]: (state) => {
       state.isLoading = true;
     },
-    [getAllJobs.fulfilled]: (state, { payload }) => {
+    [getAllBooks.fulfilled]: (state, { payload }) => {
       state.isLoading = false;
-      state.jobs = payload.jobs;
+      state.books = payload.books;
       state.numOfPages = payload.numOfPages;
-      state.totalJobs = payload.totalJobs;
+      state.totalBooks = payload.totalBooks;
     },
-    [getAllJobs.rejected]: (state, { payload }) => {
+    [getAllBooks.rejected]: (state, { payload }) => {
       state.isLoading = false;
       toast.error(payload);
     },
@@ -65,6 +68,6 @@ export const {
   handleChange,
   clearFilters,
   changePage,
-} = allJobsSlice.actions;
+} = allBooksSlice.actions;
 
-export default allJobsSlice.reducer;
+export default allBooksSlice.reducer;

@@ -5,102 +5,95 @@ import { toast } from 'react-toastify';
 import {
   handleChange,
   clearValues,
-  createJob,
-  editJob,
-} from '../../features/job/jobSlice';
+  createBook,
+  editBook,
+} from '../../features/book/bookSlice';
 import { useEffect } from 'react';
-const AddJob = () => {
+const AddBook = () => {
   const {
     isLoading,
-    position,
-    company,
-    jobLocation,
-    jobType,
-    jobTypeOptions,
+    bookAuthor,
+    bookName,
+    pageNumber,
+    bookType,
+    bookTypeOptions,
     status,
     statusOptions,
     isEditing,
-    editJobId,
-  } = useSelector((store) => store.job);
-  const { user } = useSelector((store) => store.user);
+    editBookId,
+  } = useSelector((store) => store.book);
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!position || !company || !jobLocation) {
+    if (!bookAuthor || !bookName || !pageNumber) {
       toast.error('Please fill out all fields');
       return;
     }
     if (isEditing) {
       dispatch(
-        editJob({
-          jobId: editJobId,
-          job: { position, company, jobLocation, jobType, status },
+        editBook({
+          bookId: editBookId,
+          book: { bookAuthor, bookName, pageNumber, bookType, status },
         })
       );
       return;
     }
-    dispatch(createJob({ position, company, jobLocation, jobType, status }));
+    dispatch(
+      createBook({ bookAuthor, bookName, pageNumber, bookType, status })
+    );
   };
 
-  const handleJobInput = (e) => {
+  const handleBookInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     dispatch(handleChange({ name, value }));
   };
 
-  useEffect(() => {
-    if (!isEditing) {
-      dispatch(
-        handleChange({
-          name: 'jobLocation',
-          value: user.location,
-        })
-      );
-    }
-  }, []);
-
   return (
     <Wrapper>
       <form className="form">
-        <h3>{isEditing ? 'edit job' : 'add job'}</h3>
+        <h3>{isEditing ? 'edit book' : 'add book'}</h3>
         <div className="form-center">
-          {/* position */}
+          {/* bookAuthor */}
           <FormRow
             type="text"
-            name="position"
-            value={position}
-            handleChange={handleJobInput}
+            name="bookAuthor"
+            labelText="book author"
+            value={bookAuthor}
+            handleChange={handleBookInput}
           />
-          {/* company */}
+          {/* bookName */}
           <FormRow
             type="text"
-            name="company"
-            value={company}
-            handleChange={handleJobInput}
+            name="bookName"
+            labelText="book name"
+            value={bookName}
+            handleChange={handleBookInput}
           />
-          {/* jobLocation */}
+          {/* pageNumber */}
           <FormRow
-            type="text"
-            name="jobLocation"
-            labelText="job location"
-            value={jobLocation}
-            handleChange={handleJobInput}
+            type="number"
+            min="0"
+            name="pageNumber"
+            labelText="page number"
+            value={pageNumber}
+            handleChange={handleBookInput}
           />
           {/* status */}
           <FormRowSelect
             name="status"
             value={status}
-            handleChange={handleJobInput}
+            handleChange={handleBookInput}
             list={statusOptions}
           />
-          {/* job type*/}
+          {/* book type*/}
           <FormRowSelect
-            name="jobType"
-            labelText="job type"
-            value={jobType}
-            handleChange={handleJobInput}
-            list={jobTypeOptions}
+            name="bookType"
+            labelText="book type"
+            value={bookType}
+            handleChange={handleBookInput}
+            list={bookTypeOptions}
           />
           <div className="btn-container">
             <button
@@ -124,4 +117,4 @@ const AddJob = () => {
     </Wrapper>
   );
 };
-export default AddJob;
+export default AddBook;

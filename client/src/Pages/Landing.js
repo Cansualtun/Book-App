@@ -1,8 +1,8 @@
-import React from "react";
-import main from "../assets/images/landing.png";
-import Wrapper from "../assets/wrappers/LandingPage";
+import React from 'react';
+import main from '../assets/images/landing.png';
+import Wrapper from '../assets/wrappers/LandingPage';
 //Every time we'll set up component , import wrapper from folder.
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 const Landing = () => {
   return (
     <Wrapper>
@@ -23,7 +23,7 @@ const Landing = () => {
             Login/Register
           </Link>
         </div>
-        <img src={main} alt="job hunt" className="img main-img" />
+        <img src={main} alt="books" className="img main-img" />
       </div>
     </Wrapper>
   );
