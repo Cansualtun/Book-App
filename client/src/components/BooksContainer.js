@@ -22,6 +22,7 @@ const BooksContainer = () => {
 
   useEffect(() => {
     dispatch(getAllBooks());
+    // eslint-disable-next-line
   }, [page, search, searchStatus, searchType, sort]);
 
   if (isLoading) {
