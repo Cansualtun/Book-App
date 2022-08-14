@@ -1,12 +1,12 @@
 import { FormRow, FormRowSelect } from '.';
 import Wrapper from '../assets/wrappers/SearchContainer';
 import { useSelector, useDispatch } from 'react-redux';
-import { handleChange, clearFilters } from '../features/allJobs/allJobsSlice';
+import { handleChange, clearFilters } from '../features/allBooks/allBooksSlice';
 
 const SearchContainer = () => {
   const { search, searchStatus, searchType, sort, sortOptions, isLoading } =
-    useSelector((store) => store.allJobs);
-  const { jobTypeOptions, statusOptions } = useSelector((store) => store.job);
+    useSelector((store) => store.allBooks);
+  const { bookTypeOptions, statusOptions } = useSelector((store) => store.book);
   const dispatch = useDispatch();
 
   const handleSearch = (e) => {
@@ -45,7 +45,7 @@ const SearchContainer = () => {
             name="searchType"
             value={searchType}
             handleChange={handleSearch}
-            list={['all', ...jobTypeOptions]}
+            list={['all', ...bookTypeOptions]}
           />
           <FormRowSelect
             name="sort"

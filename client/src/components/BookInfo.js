@@ -1,6 +1,6 @@
 import Wrapper from '../assets/wrappers/JobInfo';
 
-function JobInfo({ icon, text }) {
+function BookInfo({ icon, text }) {
   return (
     <Wrapper>
       <span className="icon">{icon}</span>
@@ -9,4 +9,4 @@ function JobInfo({ icon, text }) {
   );
 }
 
-export default JobInfo;
+export default BookInfo;

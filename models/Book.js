@@ -1,34 +1,34 @@
 import mongoose from 'mongoose';
 
-const JobSchema = new mongoose.Schema(
+const BookSchema = new mongoose.Schema(
   {
     // book name
-    company: {
+    bookName: {
       type: String,
-      required: [true, 'Please provide company'],
+      required: [true, 'Please provide book name'],
       maxlength: 50,
     },
     // book author
-    position: {
+    bookAuthor: {
       type: String,
-      required: [true, 'Please provide position'],
+      required: [true, 'Please provide book author'],
       maxlength: 100,
     },
     // book status
     status: {
       type: String,
-      enum: ['interview', 'declined', 'pending'],
-      default: 'pending',
+      enum: ['reading', 'finished', 'to be read'],
+      default: 'reading',
     },
     // Book Type
-    jobType: {
+    bookType: {
       type: String,
-      enum: ['full-time', 'part-time', 'remote', 'internship'],
-      default: 'full-time',
+      enum: ['fiction', 'nonfiction', 'drama', 'poetry', 'folktale'],
+      default: 'fiction',
     },
-    // Book Language
-    jobLocation: {
-      type: String,
+    // Book Page Number
+    pageNumber: {
+      type: Number,
       default: 'my-city',
       required: true,
     },
@@ -41,4 +41,4 @@ const JobSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model('Job', JobSchema);
+export default mongoose.model('Book', BookSchema);

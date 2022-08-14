@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import userSlice from './features/user/userSlice';
-import jobSlice from './features/job/jobSlice';
-import allJobsSlice from './features/allJobs/allJobsSlice';
+import bookSlice from './features/book/bookSlice';
+import allBooksSlice from './features/allBooks/allBooksSlice';
 export const store = configureStore({
   reducer: {
     user: userSlice,
-    job: jobSlice,
-    allJobs: allJobsSlice,
+    book: bookSlice,
+    allBooks: allBooksSlice,
   },
 });
