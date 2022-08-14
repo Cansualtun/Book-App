@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Wrapper = styled.main`
-  background-color: var(--bg);
   nav {
     width: var(--fluid-width);
     max-width: var(--max-width);
@@ -9,20 +8,18 @@ const Wrapper = styled.main`
     height: var(--nav-height);
     display: flex;
     align-items: center;
-    background-color: var(--dark-green);
   }
   .page {
     min-height: calc(115vh - var(--nav-height));
     display: grid;
     align-items: center;
-    background-color: var(--dark-green);
     width: 100%;
     height: 100%;
   }
   h1 {
     font-weight: 700;
     span {
-      color: var(--card);
+      color: var(--primary-500);
     }
   }
   p {

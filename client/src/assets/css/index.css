@@ -42,15 +42,10 @@ html {
   --red-dark: #842029;
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
-  --purple: #7d1e6a;
-  --bg: #e5efc1;
-  --card: #a2d5ab;
-  --search: #39aea9;
-  --button: #557b83;
 
   /* fonts  */
-  --headingFont: "Roboto Mono", monospace;
-  --bodyFont: "Roboto Mono", monospace;
+  --headingFont: "Roboto Condensed", Sans-Serif;
+  --bodyFont: "Cabin", Sans-Serif;
   --small-text: 0.875rem;
   --extra-small-text: 0.7em;
   /* rest of the vars */
@@ -153,7 +148,7 @@ ul {
 .btn {
   cursor: pointer;
   color: var(--white);
-  background: var(--purple);
+  background: var(--primary-500);
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -165,7 +160,7 @@ ul {
 }
 .btn:hover {
   background: var(--primary-700);
-  box-shadow: var(--lila);
+  box-shadow: var(--shadow-3);
 }
 .btn-hipster {
   color: var(--primary-500);
