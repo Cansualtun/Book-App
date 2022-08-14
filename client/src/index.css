@@ -43,6 +43,8 @@ html {
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
 
+  --button: #fc7e2f;
+  --hover: #ff5f00;
   /* fonts  */
   --headingFont: "Roboto Condensed", Sans-Serif;
   --bodyFont: "Cabin", Sans-Serif;
@@ -148,7 +150,7 @@ ul {
 .btn {
   cursor: pointer;
   color: var(--white);
-  background: var(--primary-500);
+  background: var(--button);
   border: transparent;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -159,7 +161,7 @@ ul {
   display: inline-block;
 }
 .btn:hover {
-  background: var(--primary-700);
+  background: var(--hover);
   box-shadow: var(--shadow-3);
 }
 .btn-hipster {
