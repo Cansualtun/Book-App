@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Wrapper = styled.section`
   display: grid;
   align-items: center;
-  background-color: var(--bg);
   .logo {
     display: block;
     margin: 0 auto;
@@ -28,7 +27,7 @@ const Wrapper = styled.section`
   .member-btn {
     background: transparent;
     border: transparent;
-    color: var(--search);
+    color: var(--button);
     cursor: pointer;
     letter-spacing: var(--letterSpacing);
   }

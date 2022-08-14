@@ -70,7 +70,7 @@ const Wrapper = styled.aside`
     color: var(--grey-900);
   }
   .active .icon {
-    color: var(--search);
+    color: var(--button);
   }
 `;
 export default Wrapper;
