@@ -31,7 +31,7 @@ Book app is an archive application where users can save the books they read and 
 
 ---
 
-# How to Start
+# How to Start Contribute
 
 We created our frontend application and that is our public assets. So, we use express static (in server.js) to serve them as our public assets. 
 By doing that, we can use our app on localhost:5000
