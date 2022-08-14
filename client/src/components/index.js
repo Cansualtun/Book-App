@@ -8,7 +8,6 @@ import Job from './Job';
 import JobsContainer from './JobsContainer';
 import SearchContainer from './SearchContainer';
 import ChartsContainer from './ChartsContainer';
-import StatsContainer from './StatsContainer';
 import Loading from './Loading';
 
 export {
@@ -22,6 +21,5 @@ export {
   JobsContainer,
   SearchContainer,
   ChartsContainer,
-  StatsContainer,
   Loading,
 };
