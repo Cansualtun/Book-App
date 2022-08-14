@@ -1,4 +1,10 @@
-# Actions
+# Book App
+
+---
+
+Book app is an archive application where users can save the books they read and follow their progress.
+
+---
 
 - Installations:
   - normalize.css installed [(link)](https://necolas.github.io/normalize.css/)
