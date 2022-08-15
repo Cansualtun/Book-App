@@ -50,7 +50,7 @@ We created our frontend application and that is our public assets. So, we use ex
 By doing that, we can use our app on localhost:5000
 
 ---
-## Contributers
+## Contributors
 
 I would like to thanks <b>[Ozan Yasin](https://github.com/OzanYasin)</b> for his great team-mate and outstanding effort.
 
