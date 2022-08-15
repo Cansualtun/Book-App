@@ -1,7 +1,7 @@
 # Book App
 
 Book app is an archive application where users can save the books they read and follow their progress.
-You can reach project with link --> https://book-app-v1.herokuapp.com/landing
+<br> You can reach project with [BookApp](https://book-app-v1.herokuapp.com/landing) </br>
 
 ---
 
@@ -39,10 +39,8 @@ You can reach project with link --> https://book-app-v1.herokuapp.com/landing
 ---
 
 ## Installation:
-
-### Before you start
 ```
-- git clone https://github.com/OzanYasin/Books-App.git
+- git clone https://github.com/Cansualtun/Books-App.git
 - create .env file
 - setup values for MONGO_URL, JWT_SECRET, JWT_LIFETIME in .env
 - npm install && npm start
@@ -50,3 +48,9 @@ You can reach project with link --> https://book-app-v1.herokuapp.com/landing
 
 We created our frontend application and that is our public assets. So, we use express static (in server.js) to serve them as our public assets. 
 By doing that, we can use our app on localhost:5000
+
+---
+## Contributers
+
+I would like to thanks <b>[Ozan Yasin](https://github.com/OzanYasin)</b> for his great team-mate and outstanding effort.
+
